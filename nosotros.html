@@ -1,165 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <div class="header__menu">
-          <!-- Logo de la empresa -->
-          <div class="header__logo">
-            <a href="index.html">
-              <img
-                src="images/logo.png"
-                alt="Logo de Valentina Emotions"
-                class="header__logo-image"
-              />
-            </a>
-          </div>
 
-          <!-- Menú de navegación principal -->
-          <nav class="header__nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="index.html" class="nav__link">Inicio</a>
-              </li>
-              <li class="nav__item">
-                <a href="tienda.html" class="nav__link">Tienda</a>
-              </li>
-              <li class="nav__item">
-                <a href="colecciones.html" class="nav__link">Colecciones</a>
-              </li>
-              <li class="nav__item">
-                <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
-              </li>
-              <li class="nav__item">
-                <a href="contacto.html" class="nav__link">Contacto</a>
-              </li>
-            </ul>
-          </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-          <!-- Menú de navegación principal -->
-          <div class="header__cart">
-            <a href="index.html">
-              <img
-                src="images/logo-carrito.png"
-                alt="Logo de Carrito Compra"
-                class="header__logo-image"
-              />
-            </a>
-          </div>
+    body {
+      font-family: "Arial", sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header__menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .header__logo img {
+      max-width: 150px;
+    }
+
+    .header__nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav__link:hover {
+      background-color: #eaeaea;
+    }
+
+    .header-banner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .header-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .header-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .header-banner a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .header-banner a:hover {
+      background-color: #ff4a39;
+    }
+
+    .main-content__section {
+      margin: 40px 0;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer__info p,
+    .footer__address p {
+      margin-bottom: 10px;
+    }
+
+    .footer__links ul {
+      list-style: none;
+    }
+
+    .footer__links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer__links a:hover {
+      color: #ff6f61;
+    }
+
+    .social-media__list {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-media__link {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-media__link:hover {
+      color: #ff6f61;
+    }
+
+    .header__logo-image {
+      width: 22px;
+      height: 18px;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      line-height: 1.8;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Sección de Quiénes Somos */
+    .quienes-somos {
+      background-color: #fff;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    .quienes-somos p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Sección de Equipo */
+    .nuestro-equipo {
+      padding: 40px 0;
+    }
+
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .equipo-item {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .equipo-item:hover {
+      transform: scale(1.05);
+    }
+
+    .equipo-item img {
+      max-width: 100%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .equipo-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .equipo-item p {
+      font-size: 1rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__menu">
+        <!-- Logo de la empresa -->
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo de Valentina Emotions" class="header__logo-image" />
+          </a>
         </div>
 
-        <!-- Banner promocional -->
-        <div class="header__banner">
-          <h1 class="banner__title">
-            Realza tu día especial con Valentina Emotions.
-          </h1>
-          <a href="colecciones.html" class="banner__cta">Explora Colecciones</a>
+        <!-- Menú de navegación principal -->
+        <nav class="header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Inicio</a>
+            </li>
+            <li class="nav__item">
+              <a href="tienda.html" class="nav__link">Tienda</a>
+            </li>
+            <li class="nav__item">
+              <a href="colecciones.html" class="nav__link">Colecciones</a>
+            </li>
+            <li class="nav__item">
+              <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
+            </li>
+            <li class="nav__item">
+              <a href="contacto.html" class="nav__link">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Menú de navegación principal -->
+        <div class="header__cart">
+          <a href="index.html">
+            <img src="images/logo-carrito.png" alt="Logo de Carrito Compra" class="header__logo-image" />
+          </a>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main class="main-content nosotros">
-        <section class="quienes-somos">
-          <h1>Sobre Nosotros</h1>
-          <p>
-            Valentina Emotions es una empresa dedicada a la creación de
-            accesorios únicos y elegantes que realzan los momentos especiales de
-            nuestros clientes.
-          </p>
-          <p>
-            Nuestra misión es crear joyas excepcionales que capturen la esencia
-            de cada ocasión, y nuestra visión es ser líderes en el mercado
-            global de accesorios de lujo.
-          </p>
-        </section>
+    <main class="main-content nosotros">
+      <section class="quienes-somos">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          Valentina Emotions es una empresa dedicada a la creación de
+          accesorios únicos y elegantes que realzan los momentos especiales de
+          nuestros clientes.
+        </p>
+        <p>
+          Nuestra misión es crear joyas excepcionales que capturen la esencia
+          de cada ocasión, y nuestra visión es ser líderes en el mercado
+          global de accesorios de lujo.
+        </p>
+      </section>
 
-        <section class="nuestro-equipo">
-          <h2>Nuestro Equipo</h2>
-          <div class="equipo-grid">
-            <!-- Miembro del equipo 1 -->
-            <div class="equipo-item">
-              <img src="images/equipo1.jpg" alt="Nombre del miembro 1" />
-              <h3>Nombre del Miembro 1</h3>
-              <p>Puesto</p>
-            </div>
-            <!-- Miembro del equipo 2 -->
-            <div class="equipo-item">
-              <img src="images/equipo2.jpg" alt="Nombre del miembro 2" />
-              <h3>Nombre del Miembro 2</h3>
-              <p>Puesto</p>
-            </div>
+      <section class="nuestro-equipo">
+        <h2>Nuestro Equipo</h2>
+        <div class="equipo-grid">
+          <!-- Miembro del equipo 1 -->
+          <div class="equipo-item">
+            <img src="images/equipo1.jpg" alt="Nombre del miembro 1" />
+            <h3>Nombre del Miembro 1</h3>
+            <p>Puesto</p>
           </div>
-        </section>
-      </main>
-
-      <!-- Pie de Página -->
-      <footer class="footer">
-        <section class="footer__content">
-          <div class="footer__info">
-            <address class="footer__address">
-              <p>Av. Tomas Marsano #555</p>
-              <p>+51 999 999 999</p>
-              <p>information@vemotions.com.pe</p>
-            </address>
+          <!-- Miembro del equipo 2 -->
+          <div class="equipo-item">
+            <img src="images/equipo2.jpg" alt="Nombre del miembro 2" />
+            <h3>Nombre del Miembro 2</h3>
+            <p>Puesto</p>
           </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Pie de Página -->
+  <footer class="footer container">
+    <section class="footer__content">
+      <div class="footer__info">
+        <address class="footer__address">
+          <p>Av. Tomas Marsano #555</p>
+          <p>+51 999 999 999</p>
+          <p>information@vemotions.com.pe</p>
+        </address>
+      </div>
 
-          <div class="footer__links">
-            <ul class="footer__links-list">
-              <li class="footer__links-item">
-                <a href="#">Políticas de Privacidad</a>
-              </li>
-              <li class="footer__links-item">
-                <a href="#">Términos de Servicio</a>
-              </li>
-              <li class="footer__links-item"><a href="#">FAQ</a></li>
-            </ul>
-          </div>
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="#">Políticas de Privacidad</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#">Términos de Servicio</a>
+          </li>
+          <li class="footer__links-item"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
 
-          <div class="footer__social-media">
-            <ul class="social-media__list">
-              <li class="social-media__item">
-                <a
-                  href="https://www.facebook.com"
-                  target="_blank"
-                  class="social-media__link"
-                  aria-label="Facebook"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="social-media__item">
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  class="social-media__link"
-                  aria-label="Instagram"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li class="social-media__item">
-                <a
-                  href="https://www.pinterest.com"
-                  target="_blank"
-                  class="social-media__link"
-                  aria-label="Pinterest"
-                >
-                  <i class="fab fa-pinterest-p"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </footer>
-    </div>
-  </body>
+      <div class="footer__social-media">
+        <ul class="social-media__list">
+          <li class="social-media__item">
+            <a href="https://www.facebook.com" target="_blank" class="social-media__link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.instagram.com" target="_blank" class="social-media__link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.pinterest.com" target="_blank" class="social-media__link" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</body>
+
 </html>
