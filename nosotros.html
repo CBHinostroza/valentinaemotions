@@ -1,395 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: "Arial", sans-serif;
-        color: #333;
-        background-color: #f4f4f4;
-        line-height: 1.6;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+    body {
+      font-family: "Arial", sans-serif;
+      color: #333;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
 
-      .header {
-        background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-      .header__menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px 0;
-      }
+    .header {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      .header__logo img {
-        max-width: 150px;
-      }
+    .header__menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+    }
 
-      .header__nav ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-      }
+    .header__logo img {
+      max-width: 150px;
+    }
 
-      .nav__link {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
+    .header__nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
 
-      .nav__link:hover {
-        background-color: #eaeaea;
-      }
+    .nav__link {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-      .header-banner {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-      }
+    .nav__link:hover {
+      background-color: #eaeaea;
+    }
 
-      .header-banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    .header-banner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
 
-      .header-banner-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        text-align: center;
-      }
+    .header-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-      .header-banner h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
+    .header-banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
 
-      .header-banner a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff6f61;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
+    .header-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
 
-      .header-banner a:hover {
-        background-color: #ff4a39;
-      }
+    .header-banner a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-      .main-content__section {
-        margin: 40px 0;
-      }
+    .header-banner a:hover {
+      background-color: #ff4a39;
+    }
 
-      .footer {
-        background-color: #333;
-        color: #fff;
-        padding: 40px 20px;
-      }
+    .main-content__section {
+      margin: 40px 0;
+    }
 
-      .footer__content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 20px;
+    }
 
-      .footer__info p,
-      .footer__address p {
-        margin-bottom: 10px;
-      }
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-      .footer__links ul {
-        list-style: none;
-      }
+    .footer__info p,
+    .footer__address p {
+      margin-bottom: 10px;
+    }
 
-      .footer__links a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+    .footer__links ul {
+      list-style: none;
+    }
 
-      .footer__links a:hover {
-        color: #ff6f61;
-      }
+    .footer__links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-      .social-media__list {
-        display: flex;
-        gap: 15px;
-      }
+    .footer__links a:hover {
+      color: #ff6f61;
+    }
 
-      .social-media__link {
-        color: #fff;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
+    .social-media__list {
+      display: flex;
+      gap: 15px;
+    }
 
-      .social-media__link:hover {
-        color: #ff6f61;
-      }
+    .social-media__link {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
 
-      .header__logo-image {
-        width: 22px;
-        height: 18px;
-      }
+    .social-media__link:hover {
+      color: #ff6f61;
+    }
 
-      body {
-        background-color: #f8f9fa;
-        line-height: 1.8;
-      }
+    .header__logo-image {
+      width: 22px;
+      height: 18px;
+    }
 
-      h1,
-      h2 {
-        text-align: center;
-        color: #333;
-        margin-bottom: 20px;
-      }
+    body {
+      background-color: #f8f9fa;
+      line-height: 1.8;
+    }
 
-      /* Sección de Quiénes Somos */
-      .quienes-somos {
-        background-color: #fff;
-        padding: 40px 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin: 40px 0;
-      }
+    h1,
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-      .quienes-somos p {
-        font-size: 1.1rem;
-        text-align: center;
-        margin-bottom: 20px;
-      }
+    /* Sección de Quiénes Somos */
+    .quienes-somos {
+      background-color: #fff;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 40px 0;
+    }
 
-      /* Sección de Equipo */
-      .nuestro-equipo {
-        padding: 40px 0;
-      }
+    .quienes-somos p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-      .equipo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
+    /* Sección de Equipo */
+    .nuestro-equipo {
+      padding: 40px 0;
+    }
 
-      .equipo-item {
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
+    .equipo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-      .equipo-item:hover {
-        transform: scale(1.05);
-      }
+    .equipo-item {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-      .equipo-item img {
-        max-width: 100%;
-        border-radius: 50%;
-        margin-bottom: 20px;
-      }
+    .equipo-item:hover {
+      transform: scale(1.05);
+    }
 
-      .equipo-item h3 {
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-        color: #444;
-      }
+    .equipo-item img {
+      max-width: 100%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
 
-      .equipo-item p {
-        font-size: 1rem;
-        color: #777;
-      }
-    </style>
-  </head>
+    .equipo-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #444;
+    }
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <div class="header__menu">
-          <!-- Logo de la empresa -->
-          <div class="header__logo">
-            <a href="index.html">
-              <img
-                src="images/logo.png"
-                alt="Logo de Valentina Emotions"
-                class="header__logo-image"
-              />
-            </a>
-          </div>
+    .equipo-item p {
+      font-size: 1rem;
+      color: #777;
+    }
+  </style>
+</head>
 
-          <!-- Menú de navegación principal -->
-          <nav class="header__nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="index.html" class="nav__link">Inicio</a>
-              </li>
-              <li class="nav__item">
-                <a href="tienda.html" class="nav__link">Tienda</a>
-              </li>
-              <li class="nav__item">
-                <a href="colecciones.html" class="nav__link">Colecciones</a>
-              </li>
-              <li class="nav__item">
-                <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
-              </li>
-              <li class="nav__item">
-                <a href="contacto.html" class="nav__link">Contacto</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Menú de navegación principal -->
-          <div class="header__cart">
-            <a href="index.html">
-              <img
-                src="images/logo-carrito.png"
-                alt="Logo de Carrito Compra"
-                class="header__logo-image"
-              />
-            </a>
-          </div>
-        </div>
-      </header>
-
-      <main class="main-content nosotros">
-        <section class="quienes-somos">
-          <h1>Sobre Nosotros</h1>
-          <p>
-            Valentina Emotions es una empresa dedicada a la creación de
-            accesorios únicos y elegantes que realzan los momentos especiales de
-            nuestros clientes.
-          </p>
-          <h1><strong>Visión</strong></h1>
-          <p>
-            Convertirnos en la marca de referencia global en joyería de alta
-            gama para bodas y compromisos, reconocidos por nuestro compromiso
-            con la artesanía, la originalidad y la personalización. Aspiramos a
-            que cada una de nuestras piezas no solo embellezca a quien la porte,
-            sino que también cuente una historia única y significativa. Buscamos
-            ser parte de esos momentos inolvidables en la vida de las personas,
-            creando joyas que trasciendan el tiempo y se conviertan en símbolos
-            de amor, elegancia y emociones profundas
-          </p>
-          <h1><strong>Misión</strong></h1>
-          <p>
-            Nuestra misión es diseñar y crear joyas que reflejen la importancia
-            de los momentos más especiales en la vida de nuestros clientes, con
-            un enfoque en la calidad artesanal y la personalización. Nos
-            esforzamos por ofrecer collares, aretes y tiaras que no solo sean
-            estéticamente hermosos, sino que también transmitan emociones y
-            recuerdos que perduren toda la vida. A través de una atención
-            cuidadosa a los detalles, el uso de materiales de primera calidad y
-            un compromiso con la satisfacción del cliente, buscamos hacer que
-            cada novia y cada persona que elija nuestras piezas se sienta única,
-            especial y conectada con el significado profundo de esos momentos.
-          </p>
-        </section>
-
-        <section class="nuestro-equipo">
-          <h2>Nuestro Equipo</h2>
-          <div class="equipo-grid">
-            <!-- Miembro del equipo 1 -->
-            <div class="equipo-item">
-              <img src="images/Equipo1.png" alt="Nombre del miembro 1" />
-              <h3>Corina Rivera</h3>
-              <p>Diseñadora de Moda</p>
-            </div>
-            <!-- Miembro del equipo 2 -->
-            <div class="equipo-item">
-              <img src="images/Equipo2.png" alt="Nombre del miembro 2" />
-              <h3>Valeria Medina</h3>
-              <p>Diseñadora de Moda</p>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-    <!-- Pie de Página -->
-    <footer class="footer container">
-      <section class="footer__content">
-        <div class="footer__info">
-          <address class="footer__address">
-            <p>Av. Tomas Marsano #456</p>
-            <p>+51 924 005 627</p>
-            <p>informacion@vemotions.com.pe</p>
-          </address>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__menu">
+        <!-- Logo de la empresa -->
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo de Valentina Emotions" class="header__logo-image" />
+          </a>
         </div>
 
-        <div class="footer__links">
-          <ul class="footer__links-list">
-            <li class="footer__links-item">
-              <a href="#">Políticas de Privacidad</a>
+        <!-- Menú de navegación principal -->
+        <nav class="header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Inicio</a>
             </li>
-            <li class="footer__links-item">
-              <a href="#">Términos de Servicio</a>
+            <li class="nav__item">
+              <a href="tienda.html" class="nav__link">Tienda</a>
             </li>
-            <li class="footer__links-item"><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__social-media">
-          <ul class="social-media__list">
-            <li class="social-media__item">
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
+            <li class="nav__item">
+              <a href="colecciones.html" class="nav__link">Colecciones</a>
             </li>
-            <li class="social-media__item">
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
+            <li class="nav__item">
+              <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
             </li>
-            <li class="social-media__item">
-              <a
-                href="https://www.pinterest.com"
-                target="_blank"
-                class="social-media__link"
-                aria-label="Pinterest"
-              >
-                <i class="fab fa-pinterest-p"></i>
-              </a>
+            <li class="nav__item">
+              <a href="contacto.html" class="nav__link">Contacto</a>
             </li>
           </ul>
+        </nav>
+
+        <!-- Menú de navegación principal -->
+        <div class="header__cart">
+          <a href="index.html">
+            <img src="images/logo-carrito.png" alt="Logo de Carrito Compra" class="header__logo-image" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content nosotros">
+      <section class="quienes-somos">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          Historia
+          Valentina Emotions nació del sueño de Valentina, una diseñadora apasionada por la creación de joyas con
+          significado. Inspirada por su abuela, decidió fundar una marca especializada en collares, aretes y tiaras para
+          compromisos importantes como bodas. Cada pieza es elaborada a mano con materiales de alta calidad y refleja la
+          esencia del amor y la elegancia que acompañan esos momentos únicos.
+          Hoy, Valentina Emotions es reconocida por crear joyas que no solo embellecen, sino que también cuentan
+          historias, haciendo que cada novia se sienta especial y única en su día más importante.
+        </p>
+        <h1><strong>Visión</strong></h1>
+        <p>
+          Convertirnos en la marca de referencia global en joyería de alta
+          gama para bodas y compromisos, reconocidos por nuestro compromiso
+          con la artesanía, la originalidad y la personalización. Aspiramos a
+          que cada una de nuestras piezas no solo embellezca a quien la porte,
+          sino que también cuente una historia única y significativa. Buscamos
+          ser parte de esos momentos inolvidables en la vida de las personas,
+          creando joyas que trasciendan el tiempo y se conviertan en símbolos
+          de amor, elegancia y emociones profundas
+        </p>
+        <h1><strong>Misión</strong></h1>
+        <p>
+          Nuestra misión es diseñar y crear joyas que reflejen la importancia
+          de los momentos más especiales en la vida de nuestros clientes, con
+          un enfoque en la calidad artesanal y la personalización. Nos
+          esforzamos por ofrecer collares, aretes y tiaras que no solo sean
+          estéticamente hermosos, sino que también transmitan emociones y
+          recuerdos que perduren toda la vida. A través de una atención
+          cuidadosa a los detalles, el uso de materiales de primera calidad y
+          un compromiso con la satisfacción del cliente, buscamos hacer que
+          cada novia y cada persona que elija nuestras piezas se sienta única,
+          especial y conectada con el significado profundo de esos momentos.
+        </p>
+      </section>
+
+      <section class="nuestro-equipo">
+        <h2>Nuestro Equipo</h2>
+        <div class="equipo-grid">
+          <!-- Miembro del equipo 1 -->
+          <div class="equipo-item">
+            <img src="images/Equipo1.png" alt="Nombre del miembro 1" />
+            <h3>Corina Rivera</h3>
+            <p>Diseñadora de Moda</p>
+          </div>
+          <!-- Miembro del equipo 2 -->
+          <div class="equipo-item">
+            <img src="images/Equipo2.png" alt="Nombre del miembro 2" />
+            <h3>Valeria Medina</h3>
+            <p>Diseñadora de Moda</p>
+          </div>
         </div>
       </section>
-    </footer>
-  </body>
+    </main>
+  </div>
+  <!-- Pie de Página -->
+  <footer class="footer container">
+    <section class="footer__content">
+      <div class="footer__info">
+        <address class="footer__address">
+          <p>Av. Tomas Marsano #456</p>
+          <p>+51 924 005 627</p>
+          <p>informacion@vemotions.com.pe</p>
+        </address>
+      </div>
+
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="#">Políticas de Privacidad</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="#">Términos de Servicio</a>
+          </li>
+          <li class="footer__links-item"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__social-media">
+        <ul class="social-media__list">
+          <li class="social-media__item">
+            <a href="https://www.facebook.com" target="_blank" class="social-media__link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.instagram.com" target="_blank" class="social-media__link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="social-media__item">
+            <a href="https://www.pinterest.com" target="_blank" class="social-media__link" aria-label="Pinterest">
+              <i class="fab fa-pinterest-p"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</body>
+
 </html>
